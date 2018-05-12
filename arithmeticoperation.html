@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Arithmetic Operation</title>
+	<script type="text/javascript">
+		function add()
+		{
+			var e=val1.value;
+			var p=val2.value;
+			var res= parseInt(e)+parseInt(p);
+			r.value=res;
+		}
+
+		function sub()
+		{
+			var e=val1.value;
+			var p=val2.value;
+			var res= parseInt(e)-parseInt(p);
+			r.value=res;
+		}
+
+		function divi()
+		{
+			var e=val1.value;
+			var p=val2.value;
+			var res= parseInt(e)/parseInt(p);
+			r.value=res;
+		}
+
+		function mult()
+		{
+			var e=val1.value;
+			var p=val2.value;
+			var res= parseInt(e)*parseInt(p);
+			r.value=res;
+		}
+
+		function modu()
+		{
+			var e=val1.value;
+			var p=val2.value;
+			var res= parseInt(e)%parseInt(p);
+			r.value=res;
+		}
+
+	</script>
+</head>
+<body>
+
+	<table align="center">
+		<tr>
+			<td colspan="2"><h1>ARITHMETIC OPERATOR</h1></td>
+		</tr> 
+
+		<tr>
+			<td>VALUE 1:</td>
+			<td>
+				<input type="text" id="val1" placeholder="input a value" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>VALUE 2:</td>
+			<td>
+				<input type="text" id="val2" placeholder="input a value" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>RESULT:</td>
+			<td>
+				<input type="text" id="r" placeholder="result is" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2"><input type="button" value="/" name="division" onclick="divi()"><input type="button" value="*" name="multiply" onclick="mult()"><input type="button" value="+" name="addition" onclick="add()"><input type="button" value="-" name="subtraction" onclick="sub()"><input type="button" value="%" name="modulus" onclick="modu()"></td> 
+		
+		</tr>
+	</table>
+
+</body>
+</html>

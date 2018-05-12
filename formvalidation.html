@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Application Form</title>
+
+	<script type="text/javascript">
+		function check()
+		{
+			if (fname.value==''||sname.value==''||email.value=='')
+			{
+				alert("application failed");
+			}
+			else
+			{
+				alert("application successful");
+			}
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td align="center" style="font-size:20px;color: navy"><strong>Job Application</strong></td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td>Firstname:</td>
+			<td>
+				<input type="text" id="fname" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>Surname:</td>
+			<td>
+				<input type="text" id="sname" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>Email:</td>
+			<td>
+				<input type="text" id="email" name="">
+			</td>
+		</tr>
+
+		<tr>
+			<td>Gender</td>
+			<td>
+				<input type="radio" name="Gender"/>Male
+				<input type="radio" name="Gender"/>Female
+			</td>
+		</tr>
+
+		<tr align="center">
+			<td align="center">
+				<input type="button" value="Submit Application" name="" onclick="check()" > </td>
+			<td></td>
+		</tr>
+	</table>
+
+</body>
+</html>
