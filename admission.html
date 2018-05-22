@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admission Checker</title>
+
+	<script>
+		function admissionOfficer()
+		{
+			var rr1=r1.value;
+			var rr2=r2.value;
+			var rr3=r3.value;
+			var rr4=r4.value;
+			var rr5=r5.value;
+			var js1=js.value;
+
+			if(rr1<=6&&rr2<=6&&rr3<=6&&rr4<=6&&rr5<=6&&js1>=180)
+			{
+				alert("admission granted");
+			}
+			else
+			{
+				alert("admission not granted");
+			}
+		}
+	</script>
+</head>
+<body>
+	<table border="1" align="center">
+		<tr>
+			<td>
+				<select id="s1"><option value="English">English</option><option value="Math">Math</option><option value="Biology">Biology</option><option value="Chemistry">Chemistry</option><option value="Physics">Physics</option></select>
+			</td><td><select id="r1"><option value="1">A1</option><option value="2">B2</option><option value="3">B3</option><option value="4">C4</option><option value="5">C5</option><option value="6">C6</option><option value="7">D7</option><option value="8">E8</option><option value="9">F9</option></select></td>
+		</tr>
+
+		<tr>
+			<td>
+				<select id="s2"><option value="English">English</option><option value="Math">Math</option><option value="Biology">Biology</option><option value="Chemistry">Chemistry</option><option value="Physics">Physics</option></select>
+			</td><td><select id="r2"><option value="1">A1</option><option value="2">B2</option><option value="3">B3</option><option value="4">C4</option><option value="5">C5</option><option value="6">C6</option><option value="7">D7</option><option value="8">E8</option><option value="9">F9</option></select></td>
+		</tr>
+
+		<tr>
+			<td>
+				<select id="s3"><option value="English">English</option><option value="Math">Math</option><option value="Biology">Biology</option><option value="Chemistry">Chemistry</option><option value="Physics">Physics</option></select>
+			</td><td><select id="r3"><option value="1">A1</option><option value="2">B2</option><option value="3">B3</option><option value="4">C4</option><option value="5">C5</option><option value="6">C6</option><option value="7">D7</option><option value="8">E8</option><option value="9">F9</option></select></td>
+		</tr>
+
+		<tr>
+			<td>
+				<select id="s4"><option value="English">English</option><option value="Math">Math</option><option value="Biology">Biology</option><option value="Chemistry">Chemistry</option><option value="Physics">Physics</option></select>
+			</td><td><select id="r4"><option value="1">A1</option><option value="2">B2</option><option value="3">B3</option><option value="4">C4</option><option value="5">C5</option><option value="6">C6</option><option value="7">D7</option><option value="8">E8</option><option value="9">F9</option></select></td>
+		</tr>
+
+		<tr>
+			<td>
+				<select id="s5"><option value="English">English</option><option value="Math">Math</option><option value="Biology">Biology</option><option value="Chemistry">Chemistry</option><option value="Physics">Physics</option></select>
+			</td><td><select id="r5"><option value="1">A1</option><option value="2">B2</option><option value="3">B3</option><option value="4">C4</option><option value="5">C5</option><option value="6">C6</option><option value="7">D7</option><option value="8">E8</option><option value="9">F9</option></select></td>
+		</tr>
+
+		<tr>
+			<td>Jamb Score</td><td><input type="text" id="js"></td>
+		</tr>
+
+		<tr align="center" >
+			<td colspan="2"><input type="button" value="Check Status" id="cs" name="check sta" onclick="admissionOfficer()"></td>
+			
+		</tr>
+
+	</table>
+
+</body>
+</html>

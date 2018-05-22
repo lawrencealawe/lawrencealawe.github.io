@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>PUSH GAME</title>
+	<script>
+		function pusher1()
+		{
+			val2.value=parseInt(val1.value)+Math.random()*10;
+		}
+		function pusher2()
+		{
+			val3.value=parseInt(val2.value)+Math.random()*10;
+		}
+		function pusher3()
+		{
+			val4.value=parseInt(val3.value)+Math.random()*10;
+
+			if(val4.value > 18 && val4.value < 24)
+			{
+				alert('Yeeeeh!');
+			}
+			else
+			{
+				aleret('Booooh!');
+			}
+		}
+	</script>
+</head>
+<body>
+		<table>
+			<tr>
+				<td><input type="text" id="val1"></td>
+				<td><input type="text" id="val2"></td>
+				<td><input type="text" id="val3"></td>
+				<td><input type="text" id="val4"></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="PUSH>>" id="p1" onclick="pusher1()"></td>
+				<td><input type="button" value="PUSH>>" id="p2" onclick="pusher2()"></td>
+				<td><input type="button" value="PUSH>>" id="p3" onclick="pusher3()"></td>
+			</tr>
+		</table>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CONVERTER</title>
+	<script>
+		function convert()
+		{
+			var result=(sel.value=="kgtog")?parseInt(val.value)*1000:(sel.value=="gtokg")?parseInt(val.value)/1000:alert("NO")
+			res.value=result;
+
+		}
+	</script>
+</head>
+<body>
+	<table border="2" align="center">
+		<tr align="center " style="width: 50%;height: 50px">
+			<td>
+				<select id="sel">
+					<option value="kgtog">Mass(kg-g)</option>
+					<option value="gtokg">Mass(g-kg)</option>
+					<option value="ctof">Mass(c-f)</option>
+					<option value="ftoc">Mass(f-c)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>VALUE: <input type="text" id="val"></td>
+		</tr>
+		<tr>
+			<td>RESULT: <input type="text" id="res"></td>
+		</tr>
+		<tr align="center">
+			<td><input type="button" value="CONVERT" onclick="convert()"></td>
+		</tr>
+	</table>
+</body>
+</html>

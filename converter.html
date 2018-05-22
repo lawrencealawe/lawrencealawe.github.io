@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CONVERTER</title>
+
+	<script type="text/javascript">
+		function myconverter()
+		{
+			var result=(sel.value=="kgtg")?parseInt(val.value)*1000:(sel.value=="gtkg")?parseInt(val.value)/1000:(sel.value=="ctf")?parseInt(val.value)+30:(sel.value=="ftc")?parseInt(val.value)-30:alert("no")
+			res.value=result;
+		}
+	</script>
+</head>
+<body>
+
+	<table align="center" border="1">
+		<tr align="center">
+			<td>
+				<select id="sel">
+					<option value="kgtg">MASS(kg-g)</option><option value="gtkg">MASS(g-kg)</option><option value="ctf">TEMP(c-f)</option><option value="ftc">TEMP(f-c)</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				VALUE: <input type="text" id="val" placeholder="input a value">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				RESULT: <input type="text" id="res">
+			</td>
+		</tr>
+		<tr>
+			<td align="center">
+				<input type="button" id="con" onclick="myconverter()" value="Convert">
+			</td>
+		</tr>
+	</table>
+
+</body>
+</html>
