@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arrays</title>
+	<script>
+		var names= [];
+ 	function checkArray()
+ 	{
+ 		if(names.length==0)
+ 		{
+ 			alert("names is currently empty. please add some names. ");
+ 		}
+ 		names.forEach(function(e)
+ 		{
+ 			alert("This is "+e);
+ 		});
+ 	}
+ 	function addTo()
+ 	{
+ 		names.push(nv.value);
+ 		alert(nv.value+"New value added");
+ 	}
+
+	</script>
+</head>
+<body>
+	<input type="text" id="nv">
+	<input type="button" id="pus" value="PUSH" onclick="addTo()">
+	<input type="button" value="CHECK ARRAYS" onclick="checkArray()">
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GSM</title>
+	<script>
+		function nums(u)
+		{
+			s.value=s.value+u;
+		}
+		function hom()
+		{
+			s.value=" ";
+		}
+		function dial()
+		{
+			if(s.value==*123#)
+			{
+				alert("1. Account Information, 2. Tariff Plan");
+			}
+		}
+
+	</script>
+	<style>
+		body
+		{
+			margin: 0;
+			padding: 0;
+		}
+		div#cell
+		{
+			display: flex;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+		}
+		div#screen
+		{
+			height: 25vh;
+			width: 20%;
+			background-color: red;
+		}
+		div #screen input
+		{
+			width: 99%;
+			height: 160px;
+
+		}
+		div#keypad
+		{
+			height: 30vh;
+			width: 20%;
+			background-color: green;
+			
+		}
+		div#screen, div#keypad
+		{
+			border: solid 1px #000;
+		}
+	</style>
+</head>
+<body>
+	<div id="cell">
+		<div id="screen"><input type="text" id="s" width="100%"></div>
+		<div id="keypad">
+			<table width="100%" align="center">
+				<tr>
+					<td><input type="button" id="A"></td>
+					<td rowspan="2"><input type="button" id="B" value="OK"></td>
+					<td><input type="button" id="C"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="A" value="DIAL" onclick="dial()"></td>
+					
+					<td><input type="button" id="h" value="HOME" onclick="hom()"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="A" value="1" onclick="nums('1')"></td>
+					<td><input type="button" id="B" value="2" onclick="nums('2')"></td>
+					<td><input type="button" id="C" value="3" onclick="nums('3')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="A" value="4" onclick="nums('4')"></td>
+					<td><input type="button" id="B" value="5" onclick="nums('5')"></td>
+					<td><input type="button" id="C" value="6" onclick="nums('6')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="A" value="7" onclick="nums('7')"></td>
+					<td><input type="button" id="B" value="8" onclick="nums('8')"></td>
+					<td><input type="button" id="C" value="9" onclick="nums('9')"></td>
+				</tr>
+				<tr>
+					<td><input type="button" id="A" value="*" onclick="nums('*')"></td>
+					<td><input type="button" id="B" value="0" onclick="nums('0')"></td>
+					<td><input type="button" id="C" value="#" onclick="nums('#')"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>

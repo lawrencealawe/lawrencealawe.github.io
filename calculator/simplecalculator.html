@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script>
+		var val1;
+		var oper;
+		var state = false;
+		function clear()
+		{
+			s.value=" ";
+		}
+		function  button(u)
+		{
+			if(state)
+			{
+			if(s.value  == '0')
+			{
+				s.value = u;
+			}
+			else
+			{
+				s.value += u;
+			}
+		}
+		}
+		function operate(w)
+		{
+			val1 = s.value;
+			s.value = " ";
+			oper = w;
+		}
+		function equal()
+		{
+			var val2=parseInt(s.value);
+			if (oper=="+")
+			{
+				(s.value=parseInt(val1)+parseInt(val2));
+			}
+			else if (oper=="-")
+			{
+				(s.value=parseInt(val1)-parseInt(val2));
+			}
+			else if (oper=="*")
+			{
+				(s.value=parseInt(val1)*parseInt(val2));
+			}
+			else if (oper=="/")
+			{
+				(s.value=parseInt(val1)/parseInt(val2));
+			}
+		}
+		function buttonon() 
+		{
+			if(onandoff.value=="OFF")
+			{
+				onandoff.value="ON";
+				s.value="";
+				state=false;
+			}
+			else
+			{
+				onandoff.value="OFF";
+				s.value="0";
+				state=true;
+			}
+		}
+
+	</script>
+</head>
+<body>
+		<table border="1" align="center">
+			<tr>
+				<td colspan="4"><input type="text" id="s"></td>
+				
+			</tr>
+
+			<tr>
+				<td><input type="button" value="1" onclick="button(1)"></td>
+				<td><input type="button" value="2" onclick="button(2)"></td>
+				<td><input type="button" value="3" onclick="button(3)"></td>
+				<td><input type="button" value="+" onclick="operate('+')"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="4" onclick="button(4)"></td>
+				<td><input type="button" value="5" onclick="button(5)"></td>
+				<td><input type="button" value="6" onclick="button(6)"></td>
+				<td><input type="button" value="-" onclick="operate('-')"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="7" onclick="button(7)"></td>
+				<td><input type="button" value="8" onclick="button(8)"></td>
+				<td><input type="button" value="9" onclick="button(9)"></td>
+				<td><input type="button" value="/" onclick="operate('/')"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="00"></td>
+				<td><input type="button" value="0" onclick="button(0)"></td>
+				<td><input type="button" value="*" onclick="operate('*')"></td>
+				<td><input type="button" value="=" onclick="equal()"></td>
+			</tr>
+
+			<tr>
+				<td><input type="button" value="." onclick="button('.')"></td>
+				<td colspan="3"><input type="button" id="onandoff" value="ON" onclick="buttonon()"></td>
+			</tr>
+		</table>
+</body>
+</html>

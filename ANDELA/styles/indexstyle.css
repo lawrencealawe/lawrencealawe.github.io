@@ -1,0 +1,171 @@
+body
+{
+	padding: 0;
+	margin:	0;
+}
+div#main
+{
+	width: 100%;
+	height: 90vh;
+	background-image: url('../images/homepage_hero_2h.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+span #logo a
+{
+	text-decoration: none;
+	font-size: 3em;
+	font-weight: bold;
+	padding-left: 20px;
+}
+a
+{
+	margin-right: 7px;
+	margin-left: 7px;
+}
+nav
+{
+	width: 40%;
+	float: right;
+	margin-top: 15px;
+
+}
+nav a
+{
+	color: #5171E0;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+div #text
+{
+	padding-top: 15%;
+	padding-left: 5%;
+}
+h1
+{
+	color: #7C0AED;
+	font-size: 2em;
+	letter-spacing: 4px;
+}
+h2#p3
+{
+	color: #473C5C;
+}
+div#contain
+{
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 100%;
+	margin-top: 7%;
+}
+div#box1, div#box2, div#box3
+{
+	width: 55%;
+	height: 40%;
+}
+#box1
+{
+	background-color: #7C0AED;
+}
+#box2
+{
+	background-color: #357F7F;
+}
+#box3
+{
+	background-color: #3359DF;
+}
+div#contain h3, p, h2
+{
+	color: white;
+	margin-left: 5%;
+}
+div#trst
+{
+	height: 35%;
+	background-color: #E4EBF1;
+	margin-top: -28%;
+}
+div#trst h4
+{
+	text-align: center;
+	color: #4D4D4D;
+}
+div#img
+{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+div#snh 
+{
+	display: flex;
+	justify-content: space-around;
+}
+div#ciw
+{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+a
+{
+	text-decoration: none;
+	font-size: 1.2em;
+}
+div#word
+{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+}
+div#word h2
+{
+	color: #2E2E2E;
+}
+div#word p
+{
+	color: #3E433E;
+}
+div#butt 
+{
+	display: flex;
+	justify-content: space-around;
+
+}
+div#butt input
+{
+	background-color: #3359DF;
+	color: #FFF4F7;
+	line-height: 30px;
+	font-weight: bold;
+}
+div#back
+{
+	height: 30%;
+	background-color: #E4EBF1;
+}
+div#imge
+{
+	display: flex;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+div#back h4
+{
+	text-align: center;
+	color: #4D4D4D;
+}
+div#footer
+{
+	background-color: #16171D;
+	width: 100%;
+	height: 100%;
+	padding-top: -28%;
+
+}
+

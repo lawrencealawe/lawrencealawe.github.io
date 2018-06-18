@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Countdown</title>
+	<script type="text/javascript">
+		var m = 0;
+		var s = 4;
+		function count()
+		{
+			s--;
+			// if(s==0)
+			// {
+				if(s<0)
+				{
+					if(m==0)
+					{
+						m=0;
+						s=00;
+					}
+				
+				else
+				{
+					m--;
+					s=4;
+				}
+			}
+			// }
+
+			if(s<10)
+			{
+				min.innerHTML = "<h1>" +m+ ": 0"  +s+ "</h1>";
+			}
+			else
+			{
+				min.innerHTML = "<h1>" +m+ ":" +s+ "</h1>";
+			}
+			setTimeout("count()",1000);
+		}
+	</script>
+</head>
+<body onload="count()">
+		<center><div id="min"><h1>5 : 59</h1></div></center>
+		
+</body>
+</html>

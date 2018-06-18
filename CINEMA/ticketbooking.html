@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOKING</title>
+	<script>
+		var sits=[];
+		function arrangeSit()
+	{
+		var htmls="<table border=1 bgcolor='orange' width=100%><tr>"
+		document.getElementById("cinemaHall").innerHTML=htmls;
+		sits.forEach(function(e){
+		 	htmls+="<img src=images/05-01.jpg width=200 height=250>"+e
+		})
+		htmls+="</tr></table>"
+		document.getElementById("cinemaHall").innerHTML=htmls
+	}
+	function addSeat()
+	{
+
+		var x=sits.length;
+		x++;
+		sits.push(x);		
+		arrangeSit();
+		// var m1 = cinemaHall.value;
+		// if(x.length > 6);
+		// {
+		// 	alert('hi');
+		// }
+		
+	}
+	function allocate()
+	{
+		// var a = vno.value;
+		// a--;	
+		// b=sits=[a]=vna.value;
+  //       alert(b);
+  //       sits=[b];
+
+  	    var p=vno.value;
+  	    var n= p--;
+  		sits[p]="SEAT"+n+"&nbsp"+vna.value;
+  		arrangeSit() 
+  		
+	}
+	</script>
+</head>
+<body>
+	<div id="cinemaHall"></div>
+	<button onclick="arrangeSit()">ARRANGE SEAT</button>
+	<button onclick="addSeat()">ADD SEAT</button><br/><br/>
+	VIEWER NO:<input type="text" id="vno"><br/><br/>
+	VIEWER NAME:<input type="text" id="vna">
+	<button onclick="allocate()">ALLOCATE SEAT</button>
+
+</body>
+</html>

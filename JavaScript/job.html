@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Job Application Form</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+	<script>
+		    
+		function sAndC()
+		{
+			var lag = "<option>Ikeja</option><option>Ikorodu</option>";
+			var oyo = "<option>Ibadan</option><option>Ogbomoso</option>";
+			var osun ="<option>Osogbo</option><option>Ikire</option>"
+			if(s.value == "Lagos")
+			{
+				c.innerHTML = lag;
+			}
+			else if(s.value =="Oyo")
+			{
+				c.innerHTML = oyo;
+			}
+			else if(s.value == "Osun")
+			{
+				c.innerHTML = osun;
+			}
+		}
+			var firstname = fn.value;
+			var lastname = ln.value;
+			var p1 = pass.value;
+			var p2 = cpass.value;
+			
+		function fnameAndSname()
+		{
+			var firstname = fn.value;
+			var lastname = ln.value;
+			var p1 = pass.value;
+			var p2 = cpass.value;
+
+
+			
+			if(firstname == '' || lastname == '' || p1 == '' || p2 == '')
+			{
+				alert("application not successful");
+			}
+			else
+			{
+				alert("application successful");
+			}
+
+
+
+
+
+			
+			if(firstname.length>=3 && lastname.length>=3)
+			{
+				alert("name approved");
+			}
+			else
+			{
+				alert("input Name");
+			}
+			if(p1==p2)
+			{
+				alert("password match");
+			}
+			else
+			{
+				alert("password does not match")
+			}
+		}
+
+		function reSet()
+		{
+			p1='';
+			p2='';
+			firstname='';
+			lastname='';
+		}
+			
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+		<form>
+			<label>First Name:
+				<input type="text" name="" id="fn">
+			</label>
+			<br/>
+			<label>Last Name:<input type="text" name="" id="ln"></label><br/>
+			<label>Email:<input type="email"></label><br/>
+			<label>Password:<input type="password" name="password" id="pass" maxlength="8" required></label><br/>
+			<label>Confirm password:<input type="password" id="cpass" maxlength="8" required></label><br/>
+			<label>Male
+				<input type="radio" name="gender">
+			</label>
+			<label>Female
+				<input type="radio" name="gender">
+			</label><br/>
+			<label>Hobbies<br/>
+					<label>Swimming<input type="checkbox"></label>
+					<label>Eating<input type="checkbox"></label><br/>
+					<label>Sleeping<input type="checkbox"></label>
+					<label>Laughing<input type="checkbox"></label>
+			</label><br/>
+			<label>Sate:<select id="s" onclick="sAndC()">
+				<option>Lagos</option>
+				<option>Oyo</option>
+				<option>Osun</option>
+			</select></label><br/>
+
+			<label>City:<select id="c">
+		</select>
+		</label><br/>
+			<button id="rest" onclick="reSet()">Reset</button>
+			<input type="submit" id="sub" onclick="fnameAndSname()">
+		</form>
+	</div>
+</div>
+</div>
+
+
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+</body>
+</html>

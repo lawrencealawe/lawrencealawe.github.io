@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sinup page</title>
+
+	<script type="text/javascript">
+		function logn() 
+		{
+			// if(pore.value!=''||pswr.value!='')
+			if(pore.value!=''&&pswr.value!='')
+			{
+				alert("log in successful");
+			}
+			else
+			{
+				alert("log in not successful");
+			}
+		}
+
+		function frm() 
+		{
+			if(fname.value!=''&&sname.value!=''&&more.value!=''&&npass.value!=''&&sel1.value!=''&&sel2.value!=''&&sel3.value!='' )
+			{
+				alert("your account is ready ");
+			}
+			else
+			{
+				alert("fill all the required fields")
+			}
+		}
+	</script>
+
+
+</head>
+<body bgcolor="lightgrey">
+	<table width="100%" border="0" cellpadding="0" cellspacing="0">
+		<tr bgcolor="navy" >
+			<th align="center" height="50px">
+		<font color="white" size="6px"> Facebook </font>
+			</th>
+			<th>
+				<label><font color="white" size="3px">Phone or Email</font></label><br/><input type="text" id="pore" name="phone or email">
+			</th>
+			<th>
+				<label><font color="white" size="3px">Password</font></label><br/><input type="password" id="pswr" name="password">
+				<td bgcolor="darkblue">
+				<input  type="button" id="log" value="Log In" name="" onclick="logn()">
+			</td>
+			</th>
+
+			<tr>
+				<td style="text-align: center">
+					<font color="darkblue" size="6px"><strong>Facebook helps you connet and share with the <br/>people in your life.</strong></font>
+				</td>
+			</tr>
+
+			<tr>
+				<td><img src="images/fb.png" width="100%" height="300" alt="image"></td>
+
+				<td colspan="3" rowspan="0">
+					<h1>Create an account</h1>
+					<h4>It's free and always will be.</h4>
+					<input type="text" id="fname" placeholder="First name" name=""><input type="text" id="sname" placeholder="Surname" name=""><br/>
+					<input type="text" id="more" style="width:66.5%" placeholder="Mobile number or email address " name=""><br/>
+					<input type="password" id="npass" style="width:66.5%" placeholder="New password" name=""><br/>
+
+					<h2>Birthday</h2><br/>
+					<select id="sel1">
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+					<select id="sel2">
+						<option>Jan</option>
+						<option>Feb</option>
+						<option>Mar</option>
+						<option>Apr</option>
+					</select>
+					<select id="sel3">
+						<option>2000</option>
+						<option>2001</option>
+						<option>2002</option>
+						<option>2003</option>
+					</select><br/><br/>
+
+					<font size="2px">By clicking an account, you agree to our<br/> Terms and confirm that you have read our<br/> Data Policym including our Cookies Use Policy.<br/> You may receive SMS message notification from<br/> Facebook and can opt out at any time. </font><br/><br/>
+
+					<input type="radio" name="Gender"/>Male
+					<input type="radio" name="Gender"/>Female<br/><br/>
+
+					<input style="background:lightgreen;height:40px"  type="button" name="Create" value="Create account" onclick="frm()"><br/><br/>
+
+					<font size="3px">Create a page for a celebrity, band or business.</font>
+
+				</td>
+			</tr>
+			
+		</tr>
+	</table>
+
+
+	
+</body>
+</html>

@@ -1,0 +1,641 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ALFIE</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script>
+
+	<style type="text/css">
+		header
+		{
+			background-image: url("img/background/bg1.jpg");
+			width: 100%;
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		.btn:hover
+		{
+			background-color: white;
+			color: black
+		}
+		.btn
+		{
+			background-color: transparent;
+			color: #fff;
+			border-radius: 0px;
+			border: 1px solid white;
+		}
+		.btn-2
+		{
+			background-color: #F6F6F6;
+			color: black;
+			border-radius: 1px lightgrey;
+			font-weight: lighter;
+			font-size: 0.9em;
+		}
+		.btn-2:hover
+		{
+			background-color: #F6F6F6;
+			color: #555555;
+			border: 1px solid black;
+		}
+		.card-1
+		{
+			height: 75px;
+			width: 68px;
+			align-items: center;
+		}
+		div#contain
+		{
+			background-color: #F6F6F6;
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: auto;
+		}
+		.fa-t
+		{
+			outline-style: solid;
+			outline-width: 1px;
+			outline-color: #30424C;
+			padding: 5px;
+			color: white;
+			background-color: black;
+		}
+		.fa-t:hover
+		{
+			background-color: white;
+			color: black;
+		}
+		#fa-1
+		{
+			outline-style: solid;
+			outline-width: 0px;
+			outline-color: #30424C;
+			padding: 20px;
+			color: black;
+
+		}
+		#fa-1:hover
+		{
+			background-color: #30424C;
+			color: white;
+		}
+		div#fle
+		{
+			display: flex;
+			flex-direction: row;
+		}
+		#hf:hover
+		{
+			color: #1AB3C0;
+
+		}
+		#hf
+		{
+			color: black;
+			font-size: 1.5em;
+		}
+		#cont
+		{
+			height: auto;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+		}
+		#a2
+		{
+			outline-style: none;
+			outline: none;
+			text-decoration: none;
+			outline-width: 0px;
+		}
+		#a-2:hover
+		{
+			color: black;
+		}
+		#conimg
+		{
+			height: auto;
+			width: 100%;
+			
+
+		}
+		#pro
+		{
+			height: auto;
+			width: 100%;
+			background-color: #F6F6F6;
+			justify-content: center;
+		}
+		#c
+		{
+			height: 75vh;
+			width: 100%;
+			background-color: #F6F6F6;
+		}
+		.btn-s:hover
+		{
+			border: 1px solid #7C7C7C;
+		}
+		.btn-s
+		{
+			background-color: transparent;
+			color: black;
+			border-radius: 0px;
+			border: 1px double #F1F1F1;
+			font-weight: lighter;
+		}
+		.card
+		{
+			background-color: white;
+		}
+		#latest
+		{
+			background-color: #F6F6F6;
+			width: 100%;
+			height: auto;
+		}
+		.btn-se:hoover
+		{
+			border: 1px solid black;
+		}
+		.btn-se
+		{
+			border-radius: 0px;
+			background-color: #DDDDDD;
+			border: 0px;
+		}
+		#sub
+		{
+			background-color: #1A1C27;
+			width: 100%;
+			height: 35vh;
+		}
+		#footer
+		{
+			background-color: #16171E;
+			width: 100%;
+			height: 7vh;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+			<a href="#" class="navbar-brand offset-1 mt-1"><img src="img/logo/logo-white.png"></a>
+			<button class="navbar-toggler" data-toggle="collapse" data-target="#target">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="target">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Service</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Project</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Team</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Pricing</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Blog</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link" style="color: white">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			
+		</nav>
+		<div class="text-center h2 " style="padding-top: 28vh; color:	#ffffff">ALFIE
+		<div class="mt-2">
+		<h3>MINIMALISTIC MULTIPURPOSE BOOTSTRAP TEMPLATE</h3>
+		</div>
+		<div><button class="btn mt-3">SEE DEMO</button></div>
+	</div>
+	</header>
+
+
+	<main class="container-fluid mt-5">
+		<div class="row text-center">
+			<div class="col-md-12 h3 mt-3">
+				WE ARE DIGITAL AGENCY BASED IN AUSTRALIA. SED DO EIUSMOD
+								<br/>TEMPOR INCIDIDUNT UT LABORE .<br/>
+			</div>
+			<div class="col-md-12" style="color: #777777">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</div>
+		</div>
+		<center><div class="row mt-5">
+			<div class="col-md-3">
+				<div class="card card-1"><i class="fa fa-lightbulb mt-4"></i></div>
+				<div class="card-body">
+			<div class="card-title  text-center">
+				HANDMADE LAYOUTS
+			</div>
+			<div class="col-md-3">Nam liber tempor cum soluta nobis eleifend option congue nihil.</div>
+		</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-1"><i class="fa fa-user mt-4"></i></div>
+				<div class="card-body">
+			<div class="card-title  text-center">
+				UNLIMITED USER
+			</div>
+			<div class="col-md-3">Nam liber tempor cum soluta nobis eleifend option congue nihil.</div>
+		</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-1"><i class="fa fa-cog mt-4"></i></div>
+				<div class="card-body">
+			<div class="card-title  text-center">
+				EXTRIEM SETTINGS
+			</div>
+			<div class="col-md-3">Nam liber tempor cum soluta nobis eleifend option congue nihil.</div>
+		</div>
+			</div>
+			<div class="col-md-3">
+				<div class="card card-1"><i class="fa fa-cloud mt-4"></i></div>
+				<div class="card-body">
+			<div class="card-title text-center">
+				UNLIMITED UPDATE
+			</div>
+			<div class="col-md-3">Nam liber tempor cum soluta nobis eleifend option congue nihil.</div>
+		</div>
+			</div>
+		</div></center>
+		
+	</main>
+
+	<div class="container-fluid mt-5" id="contain">
+		<div class="row">
+			<div class="col-md-12 h2 text-center mt-5">OUR SERVICES<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+		<div class="row mt-5" id="met-2">
+			<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-bell fa-2x" id="fa-1"></i></a>
+				<div class="text"><a href="" style="text-decoration: none" id="hf">RESPONSIVE READY</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+		<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-desktop fa-2x" id="fa-1"></i></a>
+				<div class="text"><a href="" style="text-decoration: none" id="hf">SECTION<br/> BACKGROUNDS</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+		<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-bolt fa-2x" id="fa-1"></i></a>
+				<div class="text"><a href="" style="text-decoration: none" id="hf">RETINA READY</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+	</div>
+
+	<div class="row mt-5" id="met-1" >
+			<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-lightbulb fa-2x"  id="fa-1"></i></a>
+				<div class="text offset-1"><a href="" style="text-decoration: none" id="hf">GREAT ONLINE<br/> SUPPORT</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+		<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-heart fa-2x" id="fa-1"></i></a>
+				<div class="text offset-1"><a href="" style="text-decoration: none" id="hf">COLUMNS <br/>SHORTCODES</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+		<div class="col-md-4" id="fle">
+				<a href=""><i class="fa fa-star fa-2x" id="fa-1"></i></a>
+				<div class="text offset-1" id="mafa"><a href="" style="text-decoration: none" id="hf">THEME OPTIONS</a><br/>
+					Nunc purus orci, adipiscing non ipsum non, pellentesque fringilla sapien. Phasellus lacus tellus, facilisis.
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="font-size: 2em">AWESOME PORTFOLIO<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+			<div class="row">
+			<div class="col-md-12">
+			<a href="" style="text-decoration: none; color: #A8A8A8" id="a-2">ALL</a>
+			<a href="" class="ml-5" style="text-decoration: none; color: #A8A8A8" id="a-2">GRAPHIC</a>
+			<a href="" class="ml-5" style="text-decoration: none; color: #A8A8A8" id="a-2">PRINT</a>
+			<a href="" class="ml-5" style="text-decoration: none; color: #A8A8A8" id="a-2">WEB DESIGN</a>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-4"><img src="img/portfolio/1.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/2.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/3.jpg" width="100%" height="100%"></div>
+		</div>
+
+		<div class="row mt-1">
+			<div class="col-md-4"><img src="img/portfolio/4.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/5.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/6.jpg" width="100%" height="100%"></div>
+		</div>
+
+		<div class="row mt-1">
+			<div class="col-md-4"><img src="img/portfolio/7.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/8.jpg" width="100%" height="100%"></div>
+			<div class="col-md-4"><img src="img/portfolio/9.jpg" width="100%" height="100%"></div>
+		</div>
+	</div>
+	<div class="container mt-5" id="conimg">
+		<div class="row">
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5" id="pro">
+		<div class="row">
+			<div class="col-md-3 mt-5"><h2>+450</h2><h5>PROJECTS WE HAVE <br/>DONE</h5></div>
+			<div class="col-md-3 mt-5"><h2>+80</h2><h5>CLIENTS WE SERVED</h5></div>
+			<div class="col-md-6 mt-5"><h2>WE'VE GOT WHAT YOU NEED!</h2>Start Bootstrap has everything you need to get your new website up and running in<br/> no time! All of the templates and themes on Start Bootstrap are open source, free to<br/> download, and easy to use. No strings attached!</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-3"><h2>+25</h2><h5>STAFFS WE APPOINTED</h5></div>
+			<div class="col-md-3"><button class="btn btn-2 mt-2">GET STARTED!</button></div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="font-size: 2em">CREATIVE TEAM<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+	</div>
+
+		<div class="container-fluid mt-5" id="conteam">
+		<div class="row">
+			<div class="col-md-3">
+				<img src="img/team/1.jpg" width="100%" height="60%">
+				<h5>TANVIR RAHMAN</h5><h6>CEO/FOUNDER</h6>
+				<a href=""><i class="fa fa-globe fa-t"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="img/team/2.jpg" width="100%" height="60%">
+				<h5>SAMSON ALFI</h5><h6>WEB DESIGNER</h6>
+				<a href=""><i class="fa fa-globe fa-t"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="img/team/3.jpg" width="100%" height="60%">
+				<h5>RIMON HASAN</h5><h6>WEB DEVELOPER</h6>
+				<a href=""><i class="fa fa-globe fa-t"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+			</div>
+			<div class="col-md-3">
+				<img src="img/team/4.jpg" width="100%" height="60%">
+				<h5>RIMON HASAN</h5><h6>MARKETER</h6>
+				<a href=""><i class="fa fa-globe fa-t"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+				<a href=""><i class="fa fa-globe fa-t ml-2"></i></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5 text-center" id="c">
+		<div class="row">
+			<div class="col-md-12 mt-5">
+				<img src="img/t.png">
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-md-12 mt-3">
+					<div id="caro" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#caro" data-slide-to="0" class="active"></li>
+						<li data-target="#caro" data-slide-to="1"></li>
+						<li data-target="#caro" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							
+							<div class="col-md-12"><h3>WORD-CLASS EXPERTISE</h3></div>
+			<div class="col-md-12">I’ve had some questionable experiences with other web agencies in the past, but<br/> Muhammad has hands down been the best web company we’ve worked with,<br/> providing us with peace of mind and incredible service.</div>
+			<div class="col-md-12 mt-4"><img src="img/team/5.jpg"></div>
+			<div class="col-md-12 mt-3"><h5>BRYAN CARRUTHERS - VP OF PRODUCT DESIGN</h5></div>
+
+						</div>
+						<div class="carousel-item">
+							
+							<div class="col-md-12"><h3>WORD-CLASS EXPERTISE</h3></div>
+			<div class="col-md-12">I’ve had some questionable experiences with other web agencies in the past, but<br/> Muhammad has hands down been the best web company we’ve worked with,<br/> providing us with peace of mind and incredible service.</div>
+			<div class="col-md-12 mt-4"><img src="img/team/5.jpg"></div>
+			<div class="col-md-12 mt-3"><h5>BRYAN CARRUTHERS - VP OF PRODUCT DESIGN</h5></div>
+
+						</div>
+						<div class="carousel-item">
+							
+							<div class="col-md-12"><h3>WORD-CLASS EXPERTISE</h3></div>
+			<div class="col-md-12">I’ve had some questionable experiences with other web agencies in the past, but<br/> Muhammad has hands down been the best web company we’ve worked with,<br/> providing us with peace of mind and incredible service.</div>
+			<div class="col-md-12 mt-4"><img src="img/team/5.jpg"></div>
+			<div class="col-md-12 mt-3"><h5>BRYAN CARRUTHERS - VP OF PRODUCT DESIGN</h5></div>
+
+						</div>
+
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="font-size: 2em">PRICE TABLE<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-3">
+				<div class="card">
+					<div class="card-header text-center" style="width: 100%; height: 120px; line-height: 46%"><h4><sub>$</sub><b>69</b><sub>/PER WEBSITE</sub></h4></div>
+					<div class="card-body text-center">
+						<h5>SILVER PACK</h5><br/>
+						<h6>Unlimited editing</h6><hr/>
+						<h6>100 GB Bandwidth</h6><hr/>
+						<h6>2 GB Storage</h6><hr/>
+						<h6>24/7 Support</h6><hr/>
+						<a href=""><button class="btn-s">SELECT PLAN</button></a>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-md-3">
+				<div class="card">
+					<div class="card-header text-center" style="width: 100%; height: 120px; line-height: 46%"><h4><sub>$</sub><b>79</b><sub>/PER WEBSITE</sub></h4></div>
+					<div class="card-body text-center">
+						<h5>SILVER PACK</h5><br/>
+						<h6>Unlimited editing</h6><hr/>
+						<h6>100 GB Bandwidth</h6><hr/>
+						<h6>2 GB Storage</h6><hr/>
+						<h6>24/7 Support</h6><hr/>
+						<a href=""><button class="btn-s">SELECT PLAN</button></a>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-md-3">
+				<div class="card">
+					<div class="card-header text-center" style="width: 100%; height: 120px; line-height: 46%"><h4><sub>$</sub><b>89</b><sub>/PER WEBSITE</sub></h4></div>
+					<div class="card-body text-center">
+						<h5>SILVER PACK</h5><br/>
+						<h6>Unlimited editing</h6><hr/>
+						<h6>100 GB Bandwidth</h6><hr/>
+						<h6>2 GB Storage</h6><hr/>
+						<h6>24/7 Support</h6><hr/>
+						<a href=""><button class="btn-s">SELECT PLAN</button></a>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-md-3">
+				<div class="card">
+					<div class="card-header text-center" style="width: 100%; height: 120px"><h4><sub>$</sub><b>99</b><sub>/PER WEBSITE</sub></h4></div>
+					<div class="card-body text-center">
+						<h5>SILVER PACK</h5><br/>
+						<h6>Unlimited editing</h6><hr/>
+						<h6>100 GB Bandwidth</h6><hr/>
+						<h6>2 GB Storage</h6><hr/>
+						<h6>24/7 Support</h6><hr/>
+						<a href=""><button class="btn-s">SELECT PLAN</button></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5" id="latest">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="font-size: 2em">LATEST POSTS<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-4"><img src="img/blog/1.jpg" width="100%" height="60%">
+				<a href=""><b>BLOG HEADLINE</b></a><br/>
+				Posted on 02 Feb 2016 by Michal Johson<br/>
+				Donec sodales sagittis magna nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo sed fringilla mauris sit amet nibh.
+			</div>
+			<div class="col-md-4"><img src="img/blog/2.jpg" width="100%" height="60%">
+				<a href=""><b>BLOG HEADLINE</b></a><br/>
+				Posted on 02 Feb 2016 by Michal Johson<br/>
+				Donec sodales sagittis magna nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo sed fringilla mauris sit amet nibh.
+			</div>
+			<div class="col-md-4"><img src="img/blog/3.jpg" width="100%" height="60%">
+				<a href=""><b>BLOG HEADLINE</b></a><br/>
+				Posted on 02 Feb 2016 by Michal Johson<br/>
+				Donec sodales sagittis magna nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo sed fringilla mauris sit amet nibh.
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center"><button class="btn-s">VIEW BLOG</button></div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="font-size: 2em">CONTACT US<hr class="mt-4" style="width: 5%;background-color: black"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center mt-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempora veritatis nemo aut ea<br/> iusto eos est expedita, quas ab adipisci.</div>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-md-4"><i class="fa fa-phone fa-2x"></i><br/>PHONE<br/>+3 555 5253 1285</div>
+			<div class="col-md-4"><i class="fa fa-envelope fa-2x"></i><br/>EMAIL<br/>websitename@example.com</div>
+			<div class="col-md-4"><i class="fa fa-map-marker fa-2x"></i><br/>ADDRESS<br/>Dhaka,bangladesh</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-6"><input type="text" class="form-control" placeholder="Name" style="background-color: #F6F6F6"></div>
+			<div class="col-md-6"><input type="Email" class="form-control" placeholder="Email" style="background-color: #F6F6F6"></div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-md-12"><input type="" class="form-control" placeholder="Your Message" style="background-color: #F6F6F6; height: 100px"></div>
+		</div>
+		<div class="row mt-5 text-center">
+			<div class="col-md-12"><button class="btn-se">SEND MESSAGE</button></div>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-5" id="sub">
+		<div class="row">
+			<div class="col-md-12 text-center mt-5" style="color: white">SUBSCRIBE TO OUR NEWSLETTER</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="input-group">
+						<input type="email" class="form-control" placeholder="Email Address">
+						<span class="input-group-addon">
+							<button class="btn" style="border-radius: 0px; color: white; background-color: #029AA2;">DONE</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div class="container-fluid" id="footer">
+		<div class="row">
+			<div class="col-md-12 text-center" style="color: #332B25; line-height: 50px"><footer class="footer"> &copy; THEMESITY</footer></div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script> 
+
+</body>
+</html>

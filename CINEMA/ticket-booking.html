@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Viva Cinema</title>
+	<script>
+		sts=[];
+		var rowComplete = false;
+		function arrangeSeat()
+		{
+			var y = 0;
+			var v = ars.value; 
+			var s = ars.value;
+			var htmls = "<table border=1 width=50%><tr>";
+			for(i=0;i<s;i++)
+			{
+				htmls += "<td>"+"<img src=images/t.jpg width=50 height=50>"+sts[i]+"</td>";
+				y++;
+				if(y==5)
+				{
+					rowComplete = true;
+					y=0;
+				}
+				if(rowComplete)
+				{
+					htmls += "</tr><tr>";
+					rowComplete = false;
+				}
+			}
+			htmls += "</tr></table>";
+			tab.innerHTML = htmls;
+		}
+		function allocateSeat()
+		{
+			var x = vsn.value;
+			x--;
+			if(x>-1)
+			{
+				sts[x]= vn.value;
+				arrangeSeat();
+				x+=2;
+				vsn.value=x;
+				vn.value="";
+				vn.focus();	
+			}
+			else
+			{
+				alert("No more seats");
+			}
+			
+			
+
+		}
+	</script>
+</head>
+<body>
+	<div id="tab"></div><br/>
+	<div>
+		<input type="text" id="ars">
+		<button id="arrs" onclick="arrangeSeat()">Arrange Seats</button><br/>
+		Viewer's Seat NO:<input type="text" id="vsn"><br/>
+		Viewer's Name:<input type="text" id="vn">
+		<button id="alls" onclick="allocateSeat()">Allocate Seat</button>
+	</div>
+
+</body>
+</html>

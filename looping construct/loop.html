@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOOP</title>
+	<script>
+		function grt()
+		{
+			var w=gm.value;
+			var p=gn.value;
+			var resulte;
+			for(x=1;x<=w;x++)
+			{
+				document.write(x+"Times<br/>")
+				for(i=1;i<=p;i++)
+				{
+					resulte=x*i;
+					document.write(x+"X"+i+"="+resulte+"<br/>");
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td>BLOCKS:<input type="text" id="gm" placeholder="BLOCKS"></td>
+			<td>LINES:<input type="text" id="gn" placeholder="LINES"></td>
+			<td><input type="button" value="Greet Me" id="g" onclick="grt()"></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animations</title>
+	<style>
+	body
+	{
+		padding: 0;
+		margin: 0;
+	}
+	@keyframes my-anim
+	{
+		/*from{background-color: red;
+			left:0;
+			width: 300px;}
+		to{background-color: green;
+			left: 1000px;
+			width: 600px;}*/
+			0%{background-color: red;}
+		20%{background-color: green;}
+			40%{background-color: blue;}
+		80%{background-color: brown;}
+			60%{background-color: navy;}
+		100%{background-color: grey;}
+			
+		
+			
+			
+	}
+		#box
+		{
+			width: 300px;
+			height: 300px;
+			background-color: red;
+			animation-name: my-anim;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			position: relative;
+
+		}
+	</style>
+</head>
+<body>
+		<div id="box"></div>
+</body>
+</html>

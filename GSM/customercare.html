@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMULATOR</title>
+	<script>
+		var customerCare = [
+		["1. Account Information""<br/>""2. Tariff Plan Migration""<br/>""3. Data Services""<br/>""4. Roaming & Int'l Offers","<br/>", "5. My Services""<br/>""6. Extra Time""<br/>""7. More..""<br/>""Enter 1,2,3...7 to proceed"],
+		// ["My Tools","1. My Number","<br/>", "2. My Tariff Plan","<br/>", "3. My Account balance", "<br/>","4. My Data Balance","<br/>", "5. End of call Message","<br/>","0.Back","00.MainMenu"],
+		// ["3.Re"}
+		];
+		function keys(k)
+		{
+			document.getElementById('screen').innerHTML+=k;
+		}
+
+		function dial()
+		{
+			if(document.getElementById('screen').innerHTML= "*123#")
+			{
+				document.getElementById('screen').innerHTML=customerCare[0];
+			}
+		}
+	</script>
+	<style>
+		div#screen
+		{
+			height: 100%;
+			width: 100%;
+		}
+		table
+		{
+			border-bottom-right-radius: 2px;
+			border-bottom-left-radius: 2px#
+		}
+	</style>
+</head>
+<body>
+	<table border="1" align="center">
+		<tr>
+			<td width="200px" height="150px" colspan="3"><div id="screen"></div></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="MENU"></td>
+			<td rowspan="2"><input type="button" value="OK"></td>
+			<td><input type="button" value="BACK"></td>
+		</tr>
+
+		<tr>
+			<td><button onclick="dial()">DIAL</button></td>
+			<td><button>HOME</button></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="1" onclick="keys('1')"></td>
+			<td><input type="button" value="2" onclick="keys('2')"></td>
+			<td><input type="button" value="3" onclick="keys('3')"></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="4" onclick="keys('4')"></td>
+			<td><input type="button" value="5" onclick="keys('5')"></td>
+			<td><input type="button" value="6" onclick="keys('6')"></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="7" onclick="keys('7')"></td>
+			<td><input type="button" value="8" onclick="keys('8')"></td>
+			<td><input type="button" value="9" onclick="keys('9')"></td>
+		</tr>
+
+		<tr>
+			<td><input type="button" value="*" onclick="keys('*')"></td>
+			<td><input type="button" value="0" onclick="keys('0')"></td>
+			<td><input type="button" value="#" onclick="keys('#')"></td>
+		</tr>
+	</table>
+</body>
+</html>
