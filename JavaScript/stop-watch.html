@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>STOP WATCH</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script>
+	<style type="text/css">
+		#con
+		{
+			width: 50%;
+			background-color: #66D9EF;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border-radius: 20px;
+		}
+		.btn
+		{
+			background-color: transparent;
+			color: white;
+			border-radius: 10px;
+		}
+		.btn:hover
+		{
+			background-color: #AE81FF;
+		}
+		#l1, #l2, #l3
+		{
+			border-radius: 10px;
+			color: #752672;
+		}
+		.title
+		{
+			color: #AE81FF;
+			font-family: courier;
+		}
+		#l
+		{
+			color: #AE81FF;
+		}
+		#sw
+		{
+			font-family: courier;
+			font-size: 2em;
+			color: white;
+		}
+	</style>
+<script type="text/javascript">
+		var h = 0;
+		var m = 0;
+		var s = 0;
+		var myVar;
+		var tim;
+		var flag = "l1";
+		var state = false;
+
+		function startAndStop()
+		{
+			if(srt.value=="START")
+			{
+				srt.value="STOP";
+				startWatch();
+				state=true;
+			}
+
+			else
+			{
+				srt.value="START";
+				stopWatch();
+				state=false;
+			}
+		}
+		function startWatch()
+		{
+			s++;
+			if(s==60)
+			{
+				m++;
+				s=0;
+				s++;
+				if(m==60)
+				{
+					h++;
+					m=0;
+					m++;
+				}
+			}
+			// sw.innerHTML= h + ":" + m + ":" + s;
+			myVar = setTimeout("startWatch()",1000);
+			sw.innerHTML= h + ":" + m + ":" + s;
+			
+			tim = h + ":" + m + ":" + s;
+		}
+		
+		function stopWatch()
+		{
+			clearTimeout(myVar);
+		}
+		function lap()
+		{
+			if(flag == "l1")
+			{
+				l1.value = tim; flag = "l2";
+			}
+			else if(flag == "l2")
+			{
+				l2.value = tim; flag = "l3";
+			}
+			else if(flag == "l3")
+			{
+				l3.value = tim; flag = "l1";
+			}
+		}
+
+		function check(i)
+		{
+			h = check(h);
+			m = check(m);
+			s = check(s);
+			if(i<10)
+			{
+				i="0"+i;
+			}
+				return i;
+			
+		}
+	</script>
+</head>
+<body>
+
+	<div class="container-fluid mt-5" id="con">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="title"><h1>STOP WATCH</h1></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div id="sw"></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<input type="button" class="btn" value="START" onclick="startAndStop()" id="srt" name="">
+					<!-- <button class="btn" onclick="startWatch()">START</button>
+				<button class="btn ml-3" onclick="stopWatch()">STOP</button> -->
+				<button class="btn ml-3" onclick="lap()">LAP</button>
+			</div>
+		</div>
+		<div class="row mt-5">
+		<div class="col-md-12" id="la1">
+				<label id="l">1<sup>st</sup> LAP</label>
+				<input type="" class="form-group" id="l1">
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-md-12" id="la2">
+				<label id="l">2<sup>nd</sup> LAP</label>
+				<input type="" class="form-group" id="l2">
+			</div>
+		</div>
+		<div class="row mt-3">
+			<div class="col-md-12" id="la3">
+				<label id="l">3<sup>rd</sup> LAP</label>
+				<input type="" class="form-group" id="l3">
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script> 
+</body>
+</html>

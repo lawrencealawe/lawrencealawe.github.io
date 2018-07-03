@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ALARM</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+		<style type="text/css">
+		#main
+		{
+			background-color: #F92672;
+			width: 50%;
+			height: 50vh;
+			border-radius: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.btn
+		{
+			color: #FFB100;
+			font-weight: bolder;
+			font-size: 1em;
+			background-color: transparent;
+		}
+	</style>
+	<script type="text/javascript">
+		var ust;
+		var td;
+		var q = new Audio("sound/m.mp3");
+		var stp;
+		var val;
+		var q1 = [["7 X 3",21],["2 + 3",5],["6 / 3",2],["10 - 2",8],["16 / 4",4],["5 - 5",0],["4 + 13",17]];
+		var r = Math.floor(Math.random()*7);
+		var u;
+		function set() {
+			var dt = new Date();
+			var h = dt.getHours();
+			var m = dt.getMinutes();
+			   h = checkTime(h);
+			   m = checkTime(m);
+			document.getElementById('tad').innerHTML = h +":"+ m;
+			setTimeout("set()",1000);
+		}
+		function checkTime(i)
+		{
+			if(i<10)
+			{
+				i="0"+i;
+			}
+				return i;
+			
+		}
+		function addAlarm()
+		{
+			ust = usertime.value;
+			td = tad.innerHTML;
+			if(ust==td)
+			{
+				//alert('play');
+				q.loop = true;
+				q.play();
+			}
+			
+			msg.value = "Alarm set to" + "..." + ust ;
+			stp = setTimeout("addAlarm()",1000);
+		}
+		function snooze()
+		{
+			q.pause();
+			u = usertime.value;
+			var startFrom = u.indexOf(":");
+			startFrom++;
+			back = u.substring(startFrom,5);
+			front = u.substring(0,u.indexOf(":"));
+			back = parseInt(back)+1;
+			u = front+ ":" +back;
+			usertime.value=u;
+			addAlarm();
+		}
+		function stop()
+		{ 
+			// prompt(q1[r][0]);
+			var ar1 = prompt(q1[r][0]);
+			if(ar1 == q1[r][1])
+			{
+				usertime.value = 'stopped';
+					clearTimeout(stp);
+					q.loop = false;
+					q.pause();
+					
+			}
+			else
+			{
+				alert("u still dey sleep");
+			}
+
+			// qst.value=q1;
+			// if(ar1==gm.value)
+			// {
+			// 	q.pause();
+			// clearTimeout(stp);
+			// }
+		}
+	</script>
+</head>
+<body onload="set()">
+<div class="container-fluid mt-3" id="main">
+	<div class="row">
+		<div class="col-md-12">
+				<div id="tad" style="color: white; font-size: 3em"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+				<label style="color: white">Set Time:</label>
+				<div><input type="time" name="Time" id="usertime">
+				</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn" onclick="addAlarm()">Add</button>
+			<button class="btn" onclick="snooze()">Snooze</button>
+			<button class="btn" onclick="stop()">Stop</button>
+		</div>
+	</div>
+	<div class="row mt-2">
+		<div class="col-md-12">
+			<input type="text" name="" placeholder="Alarm" id="msg">
+		</div></div>
+		<div class="row mt-1">
+		<!-- <div class="col-md-12">
+			<input type="text" name="" placeholder="Question" id="qst">
+		</div></div>
+		<div class="row mt-1">
+		<div class="col-md-12">
+			<input type="text" name="" placeholder="Answer" id="gm">
+		</div> -->
+	</div>
+</div>
+
+
+
+<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+</body>
+</html>

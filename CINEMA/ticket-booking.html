@@ -9,12 +9,13 @@
 		function arrangeSeat()
 		{
 			var y = 0;
-			var v = ars.value; 
-			var s = ars.value;
+			// var v = ars.value; 
+			// var s = ars.value;
+			vsn.push("");
 			var htmls = "<table border=1 width=50%><tr>";
-			for(i=0;i<s;i++)
+			for(i=0;i<ars.value;i++)
 			{
-				htmls += "<td>"+"<img src=images/t.jpg width=50 height=50>"+sts[i]+"</td>";
+				htmls += "<td>"+"<img src=images/t.jpg width=50 height=50>"+"<br/>"+sts[i]+"</td>";
 				y++;
 				if(y==5)
 				{

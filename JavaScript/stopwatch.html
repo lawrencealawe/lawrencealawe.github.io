@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>STOP WATCH</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<link rel="stylesheet" type="text/css" href="wowjs/css/libs/animate.css">
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script>
+
+
+	<script type="text/javascript">
+		var h = 0;
+		var m = 0;
+		var s = 0;
+		var myVar;
+		function startWatch()
+		{
+			s++;
+			if(s==59)
+			{
+				m++;
+				s=0;
+				s++;
+				if(m==60)
+				{
+					h++;
+					m=0;
+					m++;
+				}
+			}
+			sw.innerHTML="<h1>"+h+"<sub>h</sub>"+ ":" +m+"<sub>m</sub>" + ":" +s+"<sub>s</sub>"+ "</h1>";
+			myVar = setTimeout("startWatch()",1000);
+		}
+		function stopWatch()
+		{
+			clearTimeout(myVar);
+		}
+	</script>
+</head>
+<body>
+
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<center><div class="title"><h1>STOP WATCH</h1></div></center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<center><div id="sw"></div></center>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<center><button class="btn" onclick="startWatch()">START</button>
+				<button class="btn ml-3" onclick="stopWatch()">STOP</button></center>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+	<script type="text/javascript" src="wowjs/dist/wow.js"></script> 
+</body>
+</html>

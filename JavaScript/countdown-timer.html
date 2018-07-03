@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Time Countdown</title>
+	<script type="text/javascript">
+		var q = new Audio("sound/m.mp3")
+		var m;
+		var s;
+		function start()
+		{
+			m = document.getElementById('a').value;
+			s = document.getElementById('b').value;
+			min.innerHTML= m + ":" + s;
+			setTimeout("start()",1000);
+			s--;
+		}
+	</script>
+</head>
+<body>
+		<center><div id="min"></div></center>
+		<div>SET TIME<br/>
+		<select id="a"><option>10</option><option>21</option></select>
+		<select id="b"><option>59</option><option>58</option></select>
+		</div>
+		<div><button class="btn" onclick="start()">START</button></div>
+		
+</body>
+</html>

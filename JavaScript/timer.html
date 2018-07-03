@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Time Countdown</title>
 	<script type="text/javascript">
-		var m = 0;
-		var s = 4;
-		function count()
+		var q = new Audio("sound/m.mp3")
+		// var m; 
+		// var s;
+		function start()
 		{
+			var m=sel1.value;
+			var s=sel2.value;
 			s--;
-			// if(s==0)
-			// {
 				if(s<0)
 				{
 					if(m==0)
@@ -18,29 +18,34 @@
 						m=0;
 						s=00;
 					}
-				
-				else
-				{
-					m--;
-					s=4;
-				}
-			}
-			// }
+					else
+					{
+						m--;
+						s=60;
+					}
+					m=u;
+						s=v;
 
-			if(s<10)
-			{
-				min.innerHTML = "<h1>" +m+ ": 0"  +s+ "</h1>";
-			}
-			else
-			{
-				min.innerHTML = "<h1>" +m+ ":" +s+ "</h1>";
-			}
-			setTimeout("count()",1000);
+					if(m==0 && s==0)
+					{
+						q.play();
+					}
+				}
+			// alert(s);
+			min.innerHTML = "<h1>" +m+ ":" +s+ "</h1>";
+			setTimeout("start()",1000);
+
+
 		}
 	</script>
 </head>
-<body onload="count()">
-		<center><div id="min"><h1>5 : 59</h1></div></center>
+<body>
+		<center><div id="min"></div></center>
+		<div>SET TIME<br/>
+		<select id="sel1"><option>10</option><option>21</option></select>
+		<select id="sel2"><option>59</option><option>58</option></select>
+		</div>
+		<div><button class="btn" onclick="start()">START</button></div>
 		
 </body>
 </html>
