@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="offset-1 col-md-8 mt-2">
+				<table class="table table-bordered table-striped">
+				<thead>
+					<tr>
+						<td colspan="3" align="center">PROGRESS RECORD TABLE</td>
+					</tr>
+					<tr class="d-flex">
+						<th class="col-1">S/N</th>
+						<th class="col-3">Name</th>
+						<th class="col-3">Email</th>
+						<th class="col-5">Options</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			</div>
+		</div>
+			<div class="col-md-10">
+				<button id="add" class="btn btn-md">ADD STAFF</button>
+				<button id="reset" class="btn btn-md">RESET</button>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$('#reset').on('click',function()
+			{
+				$('tbody').hide();
+			});
+			var n=0;
+			$('#add').on('click',function()
+			{
+				n++;
+				var row = 
+				`<tr class="d-flex">
+				<td class="col-1">`+n+`</td>
+				<td class="col-3"><input type="text" class="name form-control"/>
+				</td>
+				<td class="col-3"><input type="email" class="email form-control"/>
+				</td>
+				<td class="col-5">
+					<button class="btn btn-sm save">SAVE</button>
+					<button class="btn btn-sm cancel">CANCEL</button>
+					<button class="btn btn-sm edit">EDIT</button>
+					<button class="btn btn-sm del">DELETE</button>
+				</td>
+				</tr>`;
+				$('tbody').append(row);
+				$('.edit').hide();
+				$('.del').hide();
+				$('.save').click(function(){
+				var edit = `<button class='edit btn btn-sm'>Edit</button>`;
+				var del = `<button class='delete btn btn-sm'>Delete</button>`;
+				var name = $(this).closest('tr').find('.name').val();
+				var email = $(this).closest('tr').find('.email').val();
+				name = `<span class="name">${name}</span>`;
+			    email = `<span class="email">${email}</span>`;
+				$('.name').replaceWith(name);
+				$('.email').replaceWith(email);
+				$('.save').replaceWith(edit);
+				$('.cancel').replaceWith(del);
+					$('.edit').click(function(){
+				var x = $(this).closest('tr').find('.name').html();
+				var y = $(this).closest('tr').find('.email').html();
+					x = `<input type="text" class="name form-control" value="${x}"/>`;
+					y = `<input type="email" class="name form-control" value="${y}"/>`;
+				var but1 = `<button class="btn btn-sm save">Save</button>`;
+				var but2 = `<button class="btn btn-sm cancel">Edit</button>`;
+					$('.name').replaceWith(x);
+					$('.email').replaceWith(y);
+					$('.edit').replaceWith(but1);
+					$('.delete').replaceWith(but2);
+					});
+
+			});
+			});
+		});
+	</script>
+</body>
+</html>

@@ -5,20 +5,21 @@
 	<title>EMULATOR</title>
 	<script>
 		var customerCare = [
-		["1. Account Information""<br/>""2. Tariff Plan Migration""<br/>""3. Data Services""<br/>""4. Roaming & Int'l Offers","<br/>", "5. My Services""<br/>""6. Extra Time""<br/>""7. More..""<br/>""Enter 1,2,3...7 to proceed"],
+		["1. Account Information""<br/>""2. Tariff Plan Migration""<br/>""3. Data Services""<br/>""4. Roaming & Int'l Offers""<br/>""5. My Services""<br/>""6. Extra Time""<br/>""7. More..""<br/>""Enter 1,2,3...7 to proceed"],
 		// ["My Tools","1. My Number","<br/>", "2. My Tariff Plan","<br/>", "3. My Account balance", "<br/>","4. My Data Balance","<br/>", "5. End of call Message","<br/>","0.Back","00.MainMenu"],
 		// ["3.Re"}
 		];
 		function keys(k)
 		{
-			document.getElementById('screen').innerHTML+=k;
+			screen.value+=k;
 		}
 
 		function dial()
 		{
-			if(document.getElementById('screen').innerHTML= "*123#")
+			if(screen.value== "*123#")
 			{
-				document.getElementById('screen').innerHTML=customerCare[0];
+				q=customerCare;
+				screen.value=q;
 			}
 		}
 	</script>
@@ -53,26 +54,26 @@
 		</tr>
 
 		<tr>
-			<td><input type="button" value="1" onclick="keys('1')"></td>
-			<td><input type="button" value="2" onclick="keys('2')"></td>
-			<td><input type="button" value="3" onclick="keys('3')"></td>
+			<td><input type="button" value="1" onclick="keys(1)"></td>
+			<td><input type="button" value="2" onclick="keys(2)"></td>
+			<td><input type="button" value="3" onclick="keys(3)"></td>
 		</tr>
 
 		<tr>
-			<td><input type="button" value="4" onclick="keys('4')"></td>
-			<td><input type="button" value="5" onclick="keys('5')"></td>
-			<td><input type="button" value="6" onclick="keys('6')"></td>
+			<td><input type="button" value="4" onclick="keys(4)"></td>
+			<td><input type="button" value="5" onclick="keys(5)"></td>
+			<td><input type="button" value="6" onclick="keys(6)"></td>
 		</tr>
 
 		<tr>
-			<td><input type="button" value="7" onclick="keys('7')"></td>
-			<td><input type="button" value="8" onclick="keys('8')"></td>
-			<td><input type="button" value="9" onclick="keys('9')"></td>
+			<td><input type="button" value="7" onclick="keys(7)"></td>
+			<td><input type="button" value="8" onclick="keys(8)"></td>
+			<td><input type="button" value="9" onclick="keys(9)"></td>
 		</tr>
 
 		<tr>
 			<td><input type="button" value="*" onclick="keys('*')"></td>
-			<td><input type="button" value="0" onclick="keys('0')"></td>
+			<td><input type="button" value="0" onclick="keys(0)"></td>
 			<td><input type="button" value="#" onclick="keys('#')"></td>
 		</tr>
 	</table>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FRIDAY CLASS</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<style type="text/css">
+		.c
+		{
+			background-color: red !important;
+			color: #fff;
+			/*width: 100%;
+			height: 100px;
+*/		}
+		/*.d
+		{
+			background-color: green;
+			height: 500px;
+		}
+*/	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 offset-1 mt-2">
+				<table class="table table-bordered table-striped">
+					<thead>
+						<tr>
+							<td colspan="3" align="center">PROGRESS RECORD TABLE</td>
+						</tr>
+						<tr class="d-flex">
+							<th class="col-5">Name</th>
+							<th class="col-4">Email</th>
+							<th class="col-3">Options</th>
+						</tr>
+					</thead>
+					<tbody>
+
+ 				</tbody>
+				</table>
+			<!-- 	<form>
+			<input type="text">		
+				</form>				 -->
+			</div>
+			<div class="col-md-10">
+				<button id="add" class="btn btn-md">ADD STAFF</button>
+			</div>	
+		</div>
+	</div>
+<!-- 	<div class="c" id="a">
+		<button class="btn">From</button>
+	</div> -->
+<!-- <button id="cal">Click</button> -->
+
+<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function()
+	{
+		$('#add').on('click',function(){
+			var edit = `<button class='edit btn btn-sm'>Edit</button>`;
+			var del = `<button class='delete btn btn-sm'>Delete</button>`;
+			var name = $('.name').val();
+			var email = $('.email').val();
+			name = `<span class="name">${name}</span>`;
+			email = `<span class="email">${email}</span>`;
+			$('.name').replaceWith(name);
+			$('.email').replaceWith(email);
+			$('.save').replaceWith(edit);
+			$('.cancel').replaceWith(del);
+			var row = `<tr class="d-flex">
+					<td class="col-5"><input type="text" class="name form-control"/></td>
+					<td class="col-4"><input type="email" class="email form-control"/></td>
+					<td class="col-3">
+		<button class="btn btn-sm save">Save</button>
+				<button class="btn btn-sm cancel">Cancel</button></td>
+			</tr>`;
+			$('tbody').append(row);
+			$('.save').click(function(){
+				var edit = `<button class='edit btn btn-sm'>Edit</button>`;
+				var del = `<button class='delete btn btn-sm'>Delete</button>`;
+				var name = $(this).closest('tr').find('.name').val();
+				var email = $(this).closest('tr').find('.email').val();
+				name = `<span class="name">${name}</span>`;
+			    email = `<span class="email">${email}</span>`;
+				$('.name').replaceWith(name);
+				$('.email').replaceWith(email);
+				$('.save').replaceWith(edit);
+				$('.cancel').replaceWith(del);
+					$('.edit').click(function(){
+				var x = $(this).closest('tr').find('.name').html();
+				var y = $(this).closest('tr').find('.email').html();
+					x = `<input type="text" class="name form-control" value="${x}"/>`;
+					y = `<input type="email" class="name form-control" value="${y}"/>`;
+				var but1 = `<button class="btn btn-sm save">Save</button>`;
+				var but2 = `<button class="btn btn-sm cancel">Edit</button>`;
+					$('.name').replaceWith(x);
+					$('.email').replaceWith(y);
+					$('.edit').replaceWith(but1);
+					$('.delete').replaceWith(but2);
+					});
+
+			});
+		
+		});
+		// $('input').focus(function(){
+		// 	$(this).addClass('c');
+		// })
+		// $('button').click(function(){
+		// 	alert();
+		// });
+		// $('#cal').on('click',function(){
+		// 	alert();
+		// })
+		// $('#call').click(function(){
+		// 	$('#a').removeClass('c').addClass('d');
+		// })
+		//toggle depreciated;
+		// $('button').toggle(
+		// 	function(){
+		// 	$(this).alert('die');
+		// },
+		// function(){
+		// 	alert('well');
+		// }
+		// )
+			
+		
+	});
+</script>
+</body>
+</html>

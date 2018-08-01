@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Music Player</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+
+	<style type="text/css">
+		.main
+		{
+			background-image: url(images/2.jpg ); 
+			background-size: contain;
+			background-repeat: no-repeat;
+			height: 50vh;
+			width: 50%;
+			background-position: contain;
+		}
+		button
+		{
+			background-color: transparent;
+		}
+		#song
+		{
+			margin-top: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		// var a = new Audio("songs/all things are possible - Copy.mp3");
+		// var b = new Audio("songs/Tope-Alabi-–-Yes-And-Amen.mp3");
+		function playSong()
+		{
+					
+		}
+		function pauseSong()
+		{
+			alert(song.value);
+			// b.pause();
+			// a.pause();
+		}
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="main mt-3">
+					<button onclick="playSong()"><i class="fa fa-play"></i></button>
+					<button onclick="pauseSong()"><i class="fa fa-pause"></i></button>
+					<!-- <audio controls=""></audio> -->
+					<div>
+						<label>Songs :</label>
+						<input type="file" name="" id="song">
+					</div>
+					<!-- <select id="s">
+						<option>all things are possible - Copy</option>
+						<option>Tope-Alabi-–-Yes-And-Amen</option>
+					</select> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+</body>
+</html>

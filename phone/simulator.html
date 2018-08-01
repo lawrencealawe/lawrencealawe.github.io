@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpo	rt" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.css">
+	<script type="text/javascript" src="sim.js"></script>
+	<style type="text/css">
+		.far
+		{
+			color: red;
+		}
+
+		#s
+		{
+			height: 40vh;
+			width: 100%;
+			border: 1px solid;
+			border-radius: 5px;
+			resize: none;
+			background-image: url(16e25906aa0aaa6150232d8918d021f1--ocean-wallpaper-wallpaper-for.jpg);width: 100%;height: 40vh;
+			color: solid black;
+			font-size: 1em;
+			/*word-break: break-all;*/
+		}
+		button
+		{
+			height: 25px;
+			width: 55px;
+			border-radius: 5px;
+		}
+		table
+		{
+			background-color: #EBEBEB;
+			border: 2px solid;
+			width: 50px;
+			height: 50vh;
+		}
+		#mid
+		{
+			width: 55px;
+			height: 50px;
+			border-radius: 5px;
+		}
+		/*voucher*/
+		#b
+		{
+			height: 30px;
+			width:	80px;
+			border-radius: 5px;
+		}
+		#ba
+		{
+			height: 30px;
+			width:	35%;
+			border-radius: 5px;
+		}
+	/*	#sv
+		{
+			height: 25vh;
+			width: 20%;
+			background-color: grey;
+		}*/
+	</style>
+</head>
+<body>
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="container" id="main">
+			<table>
+				<tr>
+					<td colspan="3"><textarea id="s"></textarea></td>
+				</tr>
+				<tr>
+					<td><button onclick="reply()">OK</button></td>
+					<td rowspan="2"><button id="mid">SEND</button></td>
+					<td><button>BACK</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="call()"><i class="fa fa-phone"></i></button></td>
+					<td><button onclick="cancel()"><i class="fa fa-phone far"></i></button></td>
+				</tr>
+				<tr>
+					<td><button onclick="keys(1)">1</button></td>
+					<td><button onclick="keys(2)">2</button></td>
+					<td><button onclick="keys(3)">3</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="keys(4)">4</button></td>
+					<td><button onclick="keys(5)">5</button></td>
+					<td><button onclick="keys(6)">6</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="keys(7)">7</button></td>
+					<td><button onclick="keys(8)">8</button></td>
+					<td><button onclick="keys(9)">9</button></td>
+				</tr>
+				<tr>
+					<td><button onclick="keys('*')">*</button></td>
+					<td><button onclick="keys(0)">0</button></td>
+					<td><button onclick="keys('#')">#</button></td>
+				</tr>
+			</table>
+		</div>
+			</div>
+			<div class="col-md-4">
+				<div>
+					<button id="ba" onclick="availableVoucher()">Available Voucher</button>
+					<div id="av" class="mt-3"></div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div> 
+					<input type="text" id="nv" name=""><button id="b" onclick="generateVoucher()">Generate</button>
+					<div id="sv" class="mt-3"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="text" id="ld" name="" class="mt-5"><button onclick="loadV()">LOAD</button>
+	<button onclick="balence()">Bal</button>
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+</body>
+</html>

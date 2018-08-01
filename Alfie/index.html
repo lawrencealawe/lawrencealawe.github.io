@@ -198,7 +198,8 @@
  <body>
 	<header>
 		<nav class="navbar navbar-expand-sm navbar-dark fixed-top">
-			<a href="#" class="navbar-brand offset-1 mt-1"><img src="img/logo/logo-white.png"></a>
+			<a href="#" class="navbar-brand offset-1 mt-1">
+				<img src="img/logo/logo-white.png"></a>
 			<button class="navbar-toggler" data-toggle="collapse" data-target="#target">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -220,7 +221,7 @@
 						<a href="#" class="nav-link" style="color: white">Pricing</a>
 					</li>
 					<li class="nav-item">
-						<a href="#" class="nav-link" style="color: white">Blog</a>
+						<a href="#awp" class="nav-link" data-target="#awp" style="color: white">Blog</a>
 					</li>
 					<li class="nav-item">
 						<a href="#" class="nav-link" style="color: white">Contact Us</a>
@@ -339,7 +340,7 @@
 </div>
 
 	<div class="container-fluid mt-5">
-		<div class="row">
+		<div class="row" id="awp">
 			<div class="col-md-12 text-center mt-5" style="font-size: 2em">AWESOME PORTFOLIO<hr class="mt-4" style="width: 5%;background-color: black"></div>
 		</div>
 		<div class="row">
@@ -661,13 +662,16 @@
 		 		$(document).scroll(function()
 		 		{
 		 			start = $(document).scrollTop();
-		 			if(start<5)
+		 			if(start<20)
 		 			{
 		 				$('.fixed-top').css('background-color','transparent');
+		 				$('.nav-link').css('color','white');
+
 		 			}
 		 			else
 		 			{
 		 				$('.fixed-top').css('background-color','white');
+		 				$('.nav-link').css('color','black');
 		 			}
 		 		})
 		 	}

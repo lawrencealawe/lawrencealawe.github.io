@@ -48,7 +48,20 @@
 			}
 			else if (oper=="/")
 			{
-				(s.value=parseInt(val1)/parseInt(val2));
+				// (s.value=parseInt(val1)/parseInt(val2));
+				try
+				{
+				 s.value = parseInt(val1)/parseInt(val2);
+					if(val2 == 0)
+					{
+						throw 'Arithmetic Exception: Division by zero';
+					}
+				}
+				catch(err)
+				{
+					s.value='Division by zero is not permitted';
+					alert(err.stack);
+				}
 			}
 		}
 		function buttonon() 

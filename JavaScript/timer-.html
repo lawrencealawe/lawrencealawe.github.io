@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var h = 0;
+		var m = 0;
+		var s = 0;
+		var stp;
+		var flag = "l1";
+		function start()
+		{
+			s++;
+			if (s>5) 
+			{
+				m++;
+				s=0;
+				if (m>5) 
+				{
+					h++;
+					m=0;
+					s=0;
+				}
+			}
+			w.innerHTML = h + ":" + m + ":" + s;
+			stp =setTimeout("start()",1000);
+		}
+		function stop()
+		{
+			clearTimeout(stp);
+		}
+		function lap()
+		{
+			var x = w.innerHTML;
+			if(flag=="l1")
+			{
+				l1.value=x;
+				flag="l2";
+			}
+			else if(flag=="l2")
+			{
+				l2.value=x;
+				flag="l3"
+			}
+			else if(flag=="l3")
+			{
+				l3.value=x;
+				flag="l1"
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="w"></div>
+	<button onclick="start()">Start</button>
+	<button onclick="stop()">Stop</button>
+	<button onclick="lap()">Lap</button><br/>
+	<input type="text" id="l1" name=""><br/>
+	<input type="text" id="l2" name=""><br/>
+	<input type="text" id="l3" name="">
+</body>
+</html>

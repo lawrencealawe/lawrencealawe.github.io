@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<style type="text/css">
+		.c
+		{
+			height: 10vh;
+			width: 30%;
+			background-color: red !important;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		// $(function()
+		// {
+		// 	alert("here");
+		// });
+		// $(document).ready(function()
+		// {
+		// 	alert();
+		// })
+		$(document).ready(function()
+		{
+			// $('button').on('click',function()
+			// {
+			// 	alert();
+			// });
+
+			// $('button').click(
+			// 	function()
+			// {
+			// 	$('.c').toggle();
+			// });
+			// $("button").toggle(
+			// 	function()
+			// 	{
+			// 		$(this).alert('die');
+			// 	},
+			// 	function()
+			// 	{
+			// 		alert('well')
+			// 	});
+			$(function()
+			{
+				$('input').focus(function(){
+					$(this).addClass('c');
+				})
+			})
+		});
+	</script>
+	<!-- <button id="cal">CLICK</button> -->
+	<!-- <div class="c" id="a"></div>
+	<button id="bc">CHANGE</button> -->
+	<!-- <div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<form>
+					<input type="text" class="c form-control" name="">
+				</form>
+			</div>
+		</div>
+	</div> -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table-bordered">
+					<thead>
+						<tr class="col-md-12">
+							<td colspan="3" class="text-center">PROGRESS RECORD TABLE</td>
+						</tr>
+						<tr>
+							<td class="col-md-5">NAME</td>
+							<td class="col-md-5">EMAIL</td>
+							<td class="col-md-2">OPTIONS</td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

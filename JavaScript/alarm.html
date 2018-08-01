@@ -42,6 +42,8 @@
 			   m = checkTime(m);
 			document.getElementById('tad').innerHTML = h +":"+ m;
 			setTimeout("set()",1000);
+			
+
 		}
 		function checkTime(i)
 		{
@@ -65,6 +67,7 @@
 			
 			msg.value = "Alarm set to" + "..." + ust ;
 			stp = setTimeout("addAlarm()",1000);
+			localStorage.setItem("me",usertime.value);
 		}
 		function snooze()
 		{

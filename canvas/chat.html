@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chat</title>
+	<style type="text/css">
+		#msgRoom
+		{
+			background-color: #806B7E;
+			width: 300px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		var f = " ";
+		function send()
+		{
+			f = textBox.value;
+			msgRoom.innerHTML += f;
+			msgRoom.innerHTML += "<br/>";
+			textBox.value = " ";
+			textBox.focus();
+			localStorage.setItem("me",msgRoom.innerHTML);
+		}
+		function saveChat()
+		{
+			msgRoom.innerHTML = localStorage.getItem("me");
+			// msgRoom.innerHTML = m;
+
+		}
+	</script>
+</head>
+<body onload="saveChat()">
+	<div id="msgRoom"></div>
+	<input type="text" id="textBox"><button onclick="send()">SEND</button>
+</body>
+</html>

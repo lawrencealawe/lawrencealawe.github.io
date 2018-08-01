@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voucher</title>
+	<style type="text/css">
+		#vD
+		{
+			background-color: #E7A74F;
+			height: 400px;
+			width: 400px;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			border: 1px;
+			overflow: scroll;
+		}
+	</style>
+	<script type="text/javascript">
+		var a;
+		var b;
+		var vA = [];
+
+		function generateVoucher()
+		{
+			a = vQ.value;
+			b = vD.innerHTML;
+			
+			for(i=1; i<=a;i++)
+			{
+				var c = "";
+				for(j=1;j<=16;j++)
+				{
+					
+					b = Math.floor(Math.random()*10);
+					 c+= b;
+					b = c.substring(0,4) + "-"+ c.substring(4,8) + "-" + c.substring(8,12)+ "-"+c.substring(12,16);
+					vD.innerHTML = b;
+				}
+				vA.push(b);
+			} 
+			vD.innerHTML = vA.join("<br/>");
+			localStorage.setItem("me",vA)
+		}
+		function availableV()
+		{
+			vD.innerHTML = localStorage.getItem("me");
+		}
+	</script>
+</head>
+<body>
+	<div id="vD"></div>
+	<input type="text" id="vQ" name=""><br/>
+	<button onclick="generateVoucher()">GENERATE</button>
+	<button onclick="availableV()">Available V</button>
+
+</body>
+</html>
