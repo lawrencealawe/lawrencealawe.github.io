@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body ng-app="myApp">
+
+{{300-100}}
+
+<div ng-controller="appControl" ng-init="name='sam';">
+	<!-- <input type="text" ng-model="name" ng-init> -->
+	<input type="text" ng-model="name">
+      <!-- {{mary}} -->
+      <!-- <div ng-bind="mary"> -->
+        <div ng-bind="name">
+	
+    </div>
+    <input type="text"  ng-model="c">
+    <input type="button" ng-click="check(c)" value="hi">
+
+    <div>
+    	<ul>
+    		<li ng-repeat="x in items">
+    			{{x}}
+    		</li>
+    	</ul>
+    </div>
+    
+    <input type="text" ng-model="add" id="toPush">
+    <input type="button" value="PushIn" ng-click="sum()">
+ <table border="1">
+ 	<tr ng-repeat="x in items|filter:add">
+ 		<td>
+ 			{{x}}
+ 		</td>
+ 	</tr>
+ </table>
+ <table border="2">
+ 	<tr ng-repeat="x in students">
+ 		<td>{{x.name}}</td>
+ 		<td>{{x.skill}}</td>
+ 	</tr>
+ </table>
+</div>
+<script type="text/javascript" src="Angular/angular.js"></script>
+<script type="text/javascript">
+	var a = angular.module("myApp",[]);
+		a.controller("appControl",function($scope)
+		{
+			//$scope.name = "Oluwabusayo";
+			$scope.check = function(b)
+			{
+				alert(b);
+			}
+			$scope.items = ['bag','chair','laptop','shoe'];
+			$scope.sum = function()
+			{
+				$scope.items.push(toPush.value);
+				alert($scope.items);
+				// $scope.items.push(this.add);
+				// alert($scope.items);
+			}
+			$scope.students = [{
+								  name : "Samuel",
+								  skill : "Web"
+								},
+								{
+									name : "Mercy",
+									skill : "Networking"
+								},
+								{
+									name : "Fola",
+									skill : "Basic"
+								}
+								];
+		});
+</script>
+
+</body>
+</html>

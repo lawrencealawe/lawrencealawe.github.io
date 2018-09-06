@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First class</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="Angular/angular.js"></script>
+	<script type="text/javascript">
+		var b = angular.module("myApp",[]);
+		b.controller("appControll",function($scope)
+		{
+			$scope.check=function(v)
+			{
+				alert(v);
+			};
+
+
+			$scope.items = ['bag','shoe','pencil'];
+
+			$scope.but=function()
+			{
+				$scope.items.push(this.addTo);
+			}
+
+			$scope.students = [{name:"Law",skill:"web"},
+			{name:"Drake",skill:"Networking"},
+			{name:"Timi",skill:"Basic"}];
+		});
+	</script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="appControll" ng-init="name='Akin';">
+		{{300-100}}<br/>
+		<input type="" name="" ng-model="name">
+		<div ng-bind="name"></div><br/>
+		<input type="" name="" ng-model="Law">
+		{{Law}}
+		<div ng-bind="Law">
+		</div><br/>
+
+		<input type="" ng-model="p"><button ng-click="check(p)" value="hey">Click</button><br/>
+
+		<div>
+			<ul>
+				<li ng-repeat="x in items">{{x}}</li>
+			</ul>
+		</div><br/>
+
+		<div>
+			<input type="" ng-model="addTo"><button ng-click="but()">Add</button>
+			<table border="1">
+				<tr ng-repeat="x in items|filter:addTo">
+					<td>{{x}}</td>
+				</tr>
+			</table>
+		</div><br/>
+
+		<div>
+			<table border="2">
+				<tr ng-repeat="x in students">
+					<td>{{x.name}}</td>
+					<td>{{x.skill}}</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

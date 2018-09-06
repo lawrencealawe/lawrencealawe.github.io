@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LAUREL AUTOS</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+	<script type="text/javascript" src="bootstrap4/js/popper.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="bootstrap4/js/bootstrap.js"></script>
+	<script type="text/javascript" src="jquery/dist/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+		// 	function queryIt(u)
+		// {
+		// 	$(u).fadeToggle();
+		// }
+			$("#black").mouseenter(function
+			{
+				document.write('black').innerHTML="Mouse entered";
+				console.log(mouse);
+			});
+		});
+	</script>
+</head>
+<body>
+	<table border="1" width="50%">
+		<tr>
+			<td>1</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>2</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>3</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>4</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>5</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>6</td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+			<td>7</td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<input type="text" name="" onkeyup="queryIt(this.value)">
+	<div id="black" style="background-color: black;color: white;height: 50vh;width: 50%"></div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+header
+		{
+			background-color: blue;
+			width: 100%;
+			height: 75vh;
+			background: linear-gradient(rgba(50,0,0,0.5),rgba(20,0,0,0.5)), url("images/pavel-kosov-271986-unsplash.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+nav
+{
+	background-color: transparent;
+	height: 10vh;
+	width: 100%;
+}
+.log
+{
+	color: white;
+	font-family: courier;
+	font-size: 2em;
+	text-decoration: none;
+}

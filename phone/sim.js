@@ -32,7 +32,7 @@
 // 	vouch = JSON.parse(localStorage.getItem("available"));
 // 	for(h=0; h<vouch.length; h++)
 // 	{
-// 		if(ld.value == vouch[h])
+// 		if(document.getElementById('s').innerHTML == vouch[h])
 // 		{
 // 			alert("loaded");
 // 		}
@@ -84,52 +84,30 @@ function loadV()
 	var bal;
 	for(n=0;n<vouch.length;n++)
 	{
-		if(ld.value =="*555*"+vouch[n][0]+"#"&&vouch[n][1]=="Used"){alert("changed");alert(vouch[n][1]);}
+		if(ld.value =="*555*"+vouch[n][0]+"#"&&vouch[n][1]=="Used")
+		{
+			alert("This card has been used or doesn't exist");
+		}
 		else if(ld.value =="*555*"+vouch[n][0]+"#"&&vouch[n][1]!="Used")
 		{
-			alert(vouch[n][1]);
-			alert("yeeeh!");
-			if (vouch[n][1]!="Used"){
-			//alert("valid")
-			// if(vouch[n][1] !=  "Used")
-			// {
-				//alert("Not used");
-				document.getElementById('s').innerHTML = "Loaded";
-				// vouch[n][1] = "Used";
-				//if(localStorage.getItem('accountB')!= null)
-				//{
-					//var bal = parseInt(localStorage.getItem('accountB'));
-					bal =100;
-					bal+= parseInt(localStorage.getItem('accountB'));
-					alert("You are credited N"+bal);
-					localStorage.setItem('accountB',bal);
-					load=true;
-					if(load){vouch[n][1]="Used";
-						vouch = JSON.stringify(vouch);
-						localStorage.setItem('available',vouch);
-					}
-					if(vouch[n][1]=="Used"){alert("changed");}
-				//}
-				//else
-				//{
-					//localStorage.setItem('accountB',bal);
-				//}
-				//vouch1 = localStorage.setItem('accountB',JSON.stringify(vouch));
+			if (vouch[n][1]!="Used")
+			{
+				alert("Loaded");
+				bal =100;
+				bal+= parseInt(localStorage.getItem('accountB'));
+				alert("You are have been credited N100");
+				localStorage.setItem('accountB',bal);
+				alert("Your account balance is N"+bal)
+				load=true;
+				if(load)
+				{
+					vouch[n][1]="Used";
+					vouch = JSON.stringify(vouch);
+					localStorage.setItem('available',vouch);
+				}
 		    }
 		}
 	}
-
-	 // 	else
-	 // 	{
-	 // 		alert("Used..");
-	 // 	}
-	 	
-	 // }
-	 // if(!found)
-	 // 	{
-	 // 		alert("invalid...")
-	 // 	}
-	 // 	call();
 }
 
 function balence()
@@ -293,7 +271,40 @@ var vou =localStorage.getItem("available");
 		// {
 		// 	document.getElementById('s').innerHTML="Dialling.."+""+document.getElementById('s').innerHTML;
 		// }
+
+
+
+	var vouch = JSON.parse(localStorage.getItem('available'));
+	var found = false;
+	var load = false;
+	var bal;
+	for(n=0;n<vouch.length;n++)
+	{
+		if(document.getElementById('s').innerHTML =="*555*"+vouch[n][0]+"#"&&vouch[n][1]=="Used")
+		{
+			alert("This card has been used or doesn't exist");
+		}
+		else if(document.getElementById('s').innerHTML =="*555*"+vouch[n][0]+"#"&&vouch[n][1]!="Used")
+		{
+			if (vouch[n][1]!="Used")
+			{
+				document.getElementById('s').innerHTML = "Loaded";
+				bal =100;
+				bal+= parseInt(localStorage.getItem('accountB'));
+				alert("You are have been credited N100");
+				localStorage.setItem('accountB',bal);
+				alert("Your account balance is N"+bal)
+				load=true;
+				if(load)
+				{
+					vouch[n][1]="Used";
+					vouch = JSON.stringify(vouch);
+					localStorage.setItem('available',vouch);
+				}
+		    }
+		}
 	}
+}
 
 	// function delayCall()
 	// {

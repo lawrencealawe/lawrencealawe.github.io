@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap4/font/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-expand-sm navbar-dark" style="background-color: red"></nav>
+	</header>
+	<div class="container-fluid mt-5">
+		<div class="row">
+			<div class="col-md-8">
+				<label>Customer's name</label>
+				<input type="text" class="form-control" name="" placeholder="Customer's name">
+			</div>
+			<div class="col-md-4">
+				<label>Date</label>
+				<input type="date" class="form-control" name="">
+			</div>
+		</div>
+	</div>
+	<div class="container mt-3">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-striped table-bordered">
+					<thead>
+						<td>S/N</td><td class="text-center">Product Name</td><td class="text-center">Qty in stock</td><td class="text-center">Price</td><td>Qty</td><td>Total</td><td><button type="button" class="btn btn-success" id="add">+</button></td>
+					</thead>
+					<tbody class="tbody">
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var qir = 3;
+		var price = 50;
+		$(function()
+		{
+			var x =0;
+			$("#add").click(function()
+			{
+				x++;
+				var r = `<tr>
+						<td id='num'>`+x+`</td>
+						<td><select class="form-control" id="product">
+						<option value="">Select Product name</option>
+						<option>Brown Bread</option>
+						<option>Chocolate</option>
+						<option>Salt</option>
+						<option>Whole Wheat Bread</option>
+						</select></td>
+						<td><input type="text" class="form-control" id="qins"></td>
+						<td><input type="text" class="form-control" id="price"></td>
+						<td><input type="text" class="form-control" id="qty"></td>
+						<td><input type="text" class="form-control" id="ttl"></td>
+						<td><button type="button" class="btn btn-danger del" id="del">-</button></td>
+					</tr>`;
+				$("tbody").append(r);
+				$(".del").click(function()
+				{
+					$(this).closest('tr').nextAll('tr').each(function()
+					{
+						var a = $(this).find('#num').html();
+						$(this).find('#num').html(a-1);
+					});
+					$(this).closest('tr').remove();
+				});
+				$("select").change(function()
+				{
+					if($(this).val() == "Salt")
+					{
+						$(this).closest("tr").find("#price").val();
+						$("#qins").replaceWith("<span id=`qu`>"+qir+"</span>");
+						$("#price").replaceWith("<span id=`pri`>"+`#`+price+"</span>");
+						$("#qty").keyup(function()
+						{
+							qty = $("#qty").val();
+							
+							$("#qu").val(qir - qty);
+							$("#ttl").val(`#`+qty * price);
+						});
+					}
+				}) 
+			});
+		});
+	</script>
+</body>
+</html>

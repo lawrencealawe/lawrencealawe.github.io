@@ -3,15 +3,16 @@ body
 	margin: 0;
 	padding: 0;
 }
-div#main
+div.main
 {
 	width: 100%;
-	height: 60vh;
+	height: 50vh;
 	/*height: 600px;*/
 	background-image: url('../Images/boy.jpg'); 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
+	position: relative;
 }
 span#logo a
 {
@@ -34,12 +35,14 @@ nav a
 	text-decoration: none;
 	font-size: 1em;
 }
-div#main h2
+div.main h2
 {
 	color: #fff;
 	font-size: 5em;
 	font-family: tahoma helvetica times;
 	padding-left: 100px;
+	position: absolute;
+	bottom: 0;
 }
 
 section h2
